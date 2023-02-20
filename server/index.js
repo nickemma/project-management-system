@@ -1,0 +1,42 @@
+import dotenv from 'dotenv';
+dotenv.config();
+import express from 'express';
+import cors from 'cors';
+import mongoose from 'mongoose';
+import morgan from 'morgan';
+
+const app = express();
+
+// ========= Middlewares ===========
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true, limit: '30mb' }));
+app.use(cors());
+app.use(morgan('dev'));
+
+// ========= Routes ===========
+
+// ========= Database Connection ===========
+
+// const CONNECTION_URL = process.env.MONGO_URL || '';
+const port = process.env.PORT;
+
+// mongoose.set('strictQuery', false);
+// mongoose
+//   .connect(CONNECTION_URL)
+//   .then(() => {
+//     app.listen(port, () => {
+//       console.log(`Server is running at http://localhost:${port}`);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
+
+app.listen(port, () => {
+  console.log(`Server is running at http://localhost:${port}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('Hello to Memories API');
+});
