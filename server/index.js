@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import cors from 'cors';
-import mongoose from 'mongoose';
+// import mongoose from 'mongoose';
 import { graphqlHTTP } from 'express-graphql';
 import schema from './schema/schema.js';
 import morgan from 'morgan';
