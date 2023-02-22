@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import express from 'express';
 import cors from 'cors';
-// import mongoose from 'mongoose';
+import mongoose from 'mongoose';
 import { graphqlHTTP } from 'express-graphql';
 import schema from './schema/schema.js';
 import morgan from 'morgan';
@@ -27,24 +27,20 @@ app.use(
 
 // ========= Database Connection ===========
 
-// const CONNECTION_URL = process.env.MONGO_URL || '';
+const CONNECTION_URL = process.env.MONGO_URI || '';
 const port = process.env.PORT;
 
-// mongoose.set('strictQuery', false);
-// mongoose
-//   .connect(CONNECTION_URL)
-//   .then(() => {
-//     app.listen(port, () => {
-//       console.log(`Server is running at http://localhost:${port}`);
-//     });
-//   })
-//   .catch((err) => {
-//     console.log(err.message);
-//   });
-
-app.listen(port, () => {
-  console.log(`Server is running at http://localhost:${port}`);
-});
+mongoose.set('strictQuery', false);
+mongoose
+  .connect(CONNECTION_URL)
+  .then(() => {
+    app.listen(port, () => {
+      console.log(`Server is running at http://localhost:${port}`);
+    });
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 
 app.get('/', (req, res) => {
   res.send('Hello to Memories API');
