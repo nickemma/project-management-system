@@ -139,9 +139,9 @@ const mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: 'ProjectStatus',
             values: {
-              Pending: { value: 'Not Started' },
-              Progress: { value: 'In Progress' },
-              Completed: { value: 'Completed' },
+              new: { value: 'Not Started' },
+              progress: { value: 'In Progress' },
+              completed: { value: 'Completed' },
             },
           }),
           defaultValue: 'Not Started',
@@ -179,25 +179,25 @@ const mutation = new GraphQLObjectType({
           type: new GraphQLEnumType({
             name: 'ProjectStatusUpdate',
             values: {
-              Pending: { value: 'Not Started' },
-              Progress: { value: 'In Progress' },
-              Completed: { value: 'Completed' },
+              new: { value: 'Not Started' },
+              progress: { value: 'In Progress' },
+              completed: { value: 'Completed' },
             },
           }),
         },
-        resolve(parent, args) {
-          return Project.findByIdAndUpdate(
-            args.id,
-            {
-              $set: {
-                name: args.name,
-                description: args.description,
-                status: args.status,
-              },
+      },
+      resolve(parent, args) {
+        return Project.findByIdAndUpdate(
+          args.id,
+          {
+            $set: {
+              name: args.name,
+              description: args.description,
+              status: args.status,
             },
-            { new: true }
-          );
-        },
+          },
+          { new: true }
+        );
       },
     },
   },
