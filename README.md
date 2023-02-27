@@ -1,7 +1,7 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Exotic Rentals ](#-exotic-rentals--)
+- [📖 Project Management System ](#-project-system--)
   - [Backend](#backend)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
@@ -21,9 +21,9 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Villa Tour <a name="about-project"></a>
+# 📖 Project Management System <a name="about-project"></a>
 
-**Villa Tour** Welcome to villa tour, the ultimate destination for luxury living. Our exquisite villas offer the perfect blend of comfort and style, and our dedicated and friendly team awaits to give you a unique and memorable experience.
+**Project Management System** is a web application that allows users to create a project and add tasks to it. It also allows users to see the progress of their projects and tasks.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -32,9 +32,10 @@
 <details>
   <summary>Client</summary>
   <ul>
-    <li><a href="https://nextjs.org/">Next.js</a></li>
-    <li><a href="https://redux.org/">Redux</a></li>
-    <li><a href="#">SCSS</a></li>
+    <li><a href="https://nextjs.org/">React.js</a></li>
+    <li><a href="https://www.apollographql.com/docs/react/">Apollo Client</a></li>
+    <li><a href="https://graphql.org/">Graphql</a></li>
+    <li><a href="https://react-bootstrap.github.io/">React Bootstrap</a></li>
   </ul>
 </details>
 
@@ -43,6 +44,8 @@
   <ul>
     <li><a href="https://nodejs.org/">NodeJS</a></li>
     <li><a href="https://nodejs.org/">ExpressJS</a></li>
+    <li><a href="https://www.apollographql.com/docs/apollo-server/">Apollo Server</a></li>
+    <li><a href="https://graphql.org/">Graphql</a></li>
   </ul>
 </details>
 
@@ -55,7 +58,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://villatour.vercel.app)
+- [Live Demo Link](https://project-management-system-app.vercel.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -78,7 +81,7 @@ Clone this repository to your desired folder:
 
 ```sh
   cd my-folder
-  git clone git@github.com:NickEmma/villa-tour.git
+  git clone git@github.com:NickEmma/project-management-system.git
 ```
 
 ### Install
@@ -86,7 +89,7 @@ Clone this repository to your desired folder:
 Install this project with:
 
 ```sh
-  cd villa-tour
+  cd project-management-system
   yarn install
 ```
 
@@ -95,7 +98,7 @@ Install this project with:
 To run the project, execute the following command:
 
 ```sh
-  yarn start
+  npm run dev
 ```
 
 ### Deployment
@@ -108,25 +111,20 @@ You can deploy this project using:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 👤 **Nicholas Emmanuel**
 
 - GitHub: [@NickEmma](https://github.com/NickEmma)
 - Twitter: [@techieEmma](https://twitter.com/techieEmma)
 - LinkedIn: [@Nicholas Emmanuel](https://www.linkedin.com/in/techieemma/)
-
-👤 **Okoye Charles**
-
-- GitHub: [@okoyecharles](https://github.com/okoyecharles)
-- Twitter: [@okoyecharles\_](https://twitter.com/okoyecharles_)
-- LinkedIn: [@Okoye Charles](https://www.linkedin.com/in/charles-k-okoye/)
+- Portfolio: [Nicholas Emmanuel](https://techieemma.tech/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **It will allow users to create a tour .**
+- [ ] **It allows users to create a project and add tasks to it.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -147,6 +145,11 @@ If you like this project consider giving it a star ⭐️.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 I would like to thank Microverse for giving me the opportunity to work on this project.
+
+- [Microverse](https://www.microverse.org/)
+- [Lazy Coders](https://lazy-coders.netlify.app/)
+- Code Reviewers
+- Coding Partners
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
